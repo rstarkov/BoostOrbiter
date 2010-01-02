@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="BoostOrbiter"
+	OutputDirectory=".\lib\$(ConfigurationName)"
+	IntermediateDirectory=".\temp\$(ConfigurationName)"
+	>
+	<Tool
+		Name="VCBscMakeTool"
+		OutputFile="$(IntDir)/$(ProjectName).bsc"
+	/>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories=".;..\..\..\include"
+		PreprocessorDefinitions="WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS"
+		StringPooling="true"
+		MinimalRebuild="true"
+		UsePrecompiledHeader="2"
+		PrecompiledHeaderThrough="PrecompiledBoostOrbiter.h"
+		BrowseInformation="1"
+		WarningLevel="3"
+		DebugInformationFormat="3"
+	/>
+	<Tool
+		Name="VCLibrarianTool"
+		AdditionalLibraryDirectories=""
+		IgnoreDefaultLibraryNames=""
+	/>
+</VisualStudioPropertySheet>

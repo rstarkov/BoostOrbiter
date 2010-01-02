@@ -1,0 +1,15 @@
+syntax: glob
+
+__*
+lib
+temp
+*.ncb
+*.suo
+*.vcproj.bak
+*.vcproj.*.user
+
+# The following files are created if orbiter is accidentally run with this directory as the current dir
+Orbiter.cfg
+Orbiter.log
+Device.dat
+keymap.cfg

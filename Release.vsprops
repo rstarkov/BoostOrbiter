@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="Release"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		Optimization="2"
+		InlineFunctionExpansion="2"
+		FavorSizeOrSpeed="1"
+		PreprocessorDefinitions="NDEBUG"
+		RuntimeLibrary="2"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		GenerateDebugInformation="true"
+	/>
+</VisualStudioPropertySheet>

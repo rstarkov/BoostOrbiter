@@ -10,8 +10,4 @@
 		PreprocessorDefinitions="_DEBUG"
 		RuntimeLibrary="3"
 	/>
-	<Tool
-		Name="VCLinkerTool"
-		GenerateDebugInformation="true"
-	/>
 </VisualStudioPropertySheet>

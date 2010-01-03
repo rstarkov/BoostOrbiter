@@ -1,0 +1,16 @@
+DEPENDENCIES
+============
+BoostOrbiter depends on a number of other projects. While everyone who worked
+on those projects contributed to BoostOrbiter indirectly, listing them all here
+would be impractical. Please refer to those projects' source distributions
+instead.
+
+* boost (various, Boost Software License)
+* SimpleIni (Brodie Thiesfield, MIT License)
+
+CONTRIBUTORS
+============
+Below is a full list of BoostOrbiter contributors, except dependencies, in
+ALPHABETICAL order:
+
+* Roman Starkov, <ws_dot_orbiter_at_starkov_dot_name>, 2009-2010

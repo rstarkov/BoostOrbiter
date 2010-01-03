@@ -137,26 +137,22 @@
 			</File>
 		</Filter>
 		<Filter
-			Name="BoostOrbiterApi"
+			Name="borb"
 			>
 			<File
-				RelativePath=".\BoostOrbiterApi\boapi.cpp"
+				RelativePath=".\borb\boapi.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\BoostOrbiterApi\boapi.h"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="Helpers"
-			>
-			<File
-				RelativePath=".\Helpers\GdiHelpers.cpp"
+				RelativePath=".\borb\boapi.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Helpers\GdiHelpers.h"
+				RelativePath=".\borb\GdiHelpers.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\borb\GdiHelpers.h"
 				>
 			</File>
 		</Filter>

@@ -1,6 +1,12 @@
-#ifndef __BOOSTORBITER_BOAPI_H__
-#define __BOOSTORBITER_BOAPI_H__
+#ifndef __BOOSTORBITER_BOOSTORBITERAPI_BOAPI_H__
+#define __BOOSTORBITER_BOOSTORBITERAPI_BOAPI_H__
 
-OBJHANDLE boapiGetVesselByName(const std::string& name);
+namespace BoostOrbiter
+{
+    namespace BoostOrbiterApi
+    {
+        OBJHANDLE boapiGetVesselByName(const std::string& name);
+    }
+}
 
-#endif // __BOOSTORBITER_BOAPI_H__
+#endif // __BOOSTORBITER_BOOSTORBITERAPI_BOAPI_H__

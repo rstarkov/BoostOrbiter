@@ -137,6 +137,18 @@
 	</References>
 	<Files>
 		<Filter
+			Name="boost"
+			>
+			<File
+				RelativePath=".\boost\license.txt"
+				>
+			</File>
+			<File
+				RelativePath=".\boost\readme.txt"
+				>
+			</File>
+		</Filter>
+		<Filter
 			Name="BoostOrbiterApi"
 			>
 			<File
@@ -145,6 +157,30 @@
 			</File>
 			<File
 				RelativePath=".\BoostOrbiterApi\boapi.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Helpers"
+			>
+			<File
+				RelativePath=".\Helpers\GdiHelpers.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Helpers\GdiHelpers.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="SimpleIni"
+			>
+			<File
+				RelativePath=".\SimpleIni\SimpleIni.h"
+				>
+			</File>
+			<File
+				RelativePath=".\SimpleIni\SimpleIniCore.h"
 				>
 			</File>
 		</Filter>

@@ -2,7 +2,7 @@
 #include <SimpleIni/SimpleIni.h>
 #include "GdiHelpers.h"
 
-namespace BoostOrbiter
+namespace borb
 {
     namespace GdiHelpers
     {

@@ -1,10 +1,10 @@
 #include <PrecompiledBoostOrbiter.h>
 
-namespace BoostOrbiter
+namespace borb
 {
-    namespace BoostOrbiterApi
+    namespace boapi
     {
-        OBJHANDLE boapiGetVesselByName(const std::string& name)
+        OBJHANDLE GetVesselByName(const std::string& name)
         {
             char cstr[256];
             size_t length = name.copy(cstr, sizeof(cstr) - 1);

@@ -1,7 +1,7 @@
-#ifndef __BOOSTORBITER_HELPERS_GDIHELPERS_H__
-#define __BOOSTORBITER_HELPERS_GDIHELPERS_H__
+#ifndef __BOOSTORBITER_BORB_GDIHELPERS_H__
+#define __BOOSTORBITER_BORB_GDIHELPERS_H__
 
-namespace BoostOrbiter
+namespace borb
 {
     namespace GdiHelpers
     {
@@ -32,4 +32,4 @@ namespace BoostOrbiter
     }
 }
 
-#endif // __BOOSTORBITER_HELPERS_GDIHELPERS_H__
+#endif // __BOOSTORBITER_BORB_GDIHELPERS_H__

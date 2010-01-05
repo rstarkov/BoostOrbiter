@@ -15,7 +15,7 @@ namespace borb
         using boost::shared_ptr;
 
         static std::vector<DWORD> _mfdColors;
-        static std::vector<shared_ptr<void>> _mfdPens;
+        static std::vector<CPen> _mfdPens;
 
         void initMfdColors()
         {
@@ -44,26 +44,19 @@ namespace borb
             return _mfdColors[index];
         }
 
-        struct GdiObjectDeleter
-        {
-            void operator()(void * p) { DeleteObject( (HGDIOBJ) p); }
-        };
-
         HPEN GetDefaultPen(MfdColor color, MfdPenStyle style)
         {
             size_t index = color * 2 + (style - 1);
             if (index >= _mfdPens.size())
                 _mfdPens.resize(index + 1);
 
-            if (_mfdPens[index])
-                return (HPEN) _mfdPens[index].get();
-            else
+            if (_mfdPens[index].IsNull())
             {
-                HPEN hpen = CreatePen(style == MfdPenSolid ? PS_SOLID : PS_DOT, 1, GetDefaultColor(color));
-                shared_ptr<void> newPen(hpen, GdiObjectDeleter());
-                _mfdPens[index] = newPen;
-                return (HPEN) newPen.get();
+                _mfdPens[index] = CPen();
+                _mfdPens[index].CreatePen(style == MfdPenSolid ? PS_SOLID : PS_DOT, 1, GetDefaultColor(color));
             }
+
+            return _mfdPens[index];
         }
     }
 }

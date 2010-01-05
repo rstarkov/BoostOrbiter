@@ -168,6 +168,26 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="WTL"
+			>
+			<File
+				RelativePath=".\WTL\atlapp.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WTL\atlgdi.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WTL\atluser.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WTL\atlwinx.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\PrecompiledBoostOrbiter.cpp"
 			>

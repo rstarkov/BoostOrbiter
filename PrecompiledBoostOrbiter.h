@@ -22,6 +22,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <malloc.h>
+#include <atlbase.h>
 
 #include <Orbiterapi.h>
 #include <Orbitersdk.h>
@@ -32,5 +33,6 @@
 #include <boost/shared_ptr.hpp>
 #include <boost/weak_ptr.hpp>
 #include <boost/enable_shared_from_this.hpp>
+#include <WTL/atlapp.h>
 
 #endif // __BOOSTORBITER_PRECOMPILEDBOOSTORBITER_H__

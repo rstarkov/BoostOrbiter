@@ -27,4 +27,8 @@
 		AdditionalLibraryDirectories=""
 		IgnoreDefaultLibraryNames=""
 	/>
+	<Tool
+		Name="VCLinkerTool"
+		IgnoreDefaultLibraryNames="libc.lib;libcmt.lib;libcd.lib;libcmtd.lib"
+	/>
 </VisualStudioPropertySheet>

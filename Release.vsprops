@@ -13,4 +13,8 @@
 		WholeProgramOptimization="true"
 		RuntimeLibrary="2"
 	/>
+	<Tool
+		Name="VCLinkerTool"
+		IgnoreDefaultLibraryNames="msvcrtd.lib"
+	/>
 </VisualStudioPropertySheet>

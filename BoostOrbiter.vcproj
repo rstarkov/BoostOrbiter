@@ -180,6 +180,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\WTL\atlres.h"
+				>
+			</File>
+			<File
 				RelativePath=".\WTL\atluser.h"
 				>
 			</File>

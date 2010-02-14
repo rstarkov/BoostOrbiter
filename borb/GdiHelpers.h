@@ -3,9 +3,7 @@
 // and conditions defined in file 'license.txt'. Full list of contributors is
 // available in file 'contributors.txt'.
 //----------------------------------------------------------------------------
-
-#ifndef __BOOSTORBITER_BORB_GDIHELPERS_H__
-#define __BOOSTORBITER_BORB_GDIHELPERS_H__
+#pragma once
 
 namespace borb
 {
@@ -37,5 +35,3 @@ namespace borb
         HPEN GetDefaultPen(MfdColor color, MfdPenStyle style);
     }
 }
-
-#endif // __BOOSTORBITER_BORB_GDIHELPERS_H__

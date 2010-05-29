@@ -1,12 +1,11 @@
 syntax: glob
 
 __*
-lib
-temp
+.bin
+.temp
 *.ncb
 *.suo
-*.vcproj.bak
-*.vcproj.*.user
+*.vcxproj.user
 
 # The following files are created if orbiter is accidentally run with this directory as the current dir
 Orbiter.cfg

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="boost">
+      <UniqueIdentifier>{6e46c029-2ae8-4080-b311-30cf13505d48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="borb">
+      <UniqueIdentifier>{22eba00f-0f56-403a-9035-be9ec20097a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SimpleIni">
+      <UniqueIdentifier>{e631f965-d057-4d46-af16-45d079ffb724}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WTL">
+      <UniqueIdentifier>{3d0b3753-bd3f-4cc9-bda4-792640c7f628}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="boost\license.txt">
+      <Filter>boost</Filter>
+    </None>
+    <None Include="boost\readme.txt">
+      <Filter>boost</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="borb\boapi.cpp">
+      <Filter>borb</Filter>
+    </ClCompile>
+    <ClCompile Include="borb\GdiHelpers.cpp">
+      <Filter>borb</Filter>
+    </ClCompile>
+    <ClCompile Include="PrecompiledBoostOrbiter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="borb\boapi.h">
+      <Filter>borb</Filter>
+    </ClInclude>
+    <ClInclude Include="borb\GdiHelpers.h">
+      <Filter>borb</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleIni\SimpleIni.h">
+      <Filter>SimpleIni</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleIni\SimpleIniCore.h">
+      <Filter>SimpleIni</Filter>
+    </ClInclude>
+    <ClInclude Include="WTL\atlapp.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="WTL\atlgdi.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="WTL\atlres.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="WTL\atluser.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="WTL\atlwinx.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="PrecompiledBoostOrbiter.h" />
+  </ItemGroup>
+</Project>

@@ -13,6 +13,9 @@
     <Filter Include="WTL">
       <UniqueIdentifier>{3d0b3753-bd3f-4cc9-bda4-792640c7f628}</UniqueIdentifier>
     </Filter>
+    <Filter Include="OrbitalMath">
+      <UniqueIdentifier>{8bf76010-4be3-4e70-82d2-9409bdabe105}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="boost\license.txt">
@@ -60,5 +63,29 @@
       <Filter>WTL</Filter>
     </ClInclude>
     <ClInclude Include="PrecompiledBoostOrbiter.h" />
+    <ClInclude Include="OrbitalMath\OrbitalMath.h">
+      <Filter>OrbitalMath</Filter>
+    </ClInclude>
+    <ClInclude Include="OrbitalMath\Types.h">
+      <Filter>OrbitalMath</Filter>
+    </ClInclude>
+    <ClInclude Include="OrbitalMath\Util.h">
+      <Filter>OrbitalMath</Filter>
+    </ClInclude>
+    <ClInclude Include="OrbitalMath\Consts.h">
+      <Filter>OrbitalMath</Filter>
+    </ClInclude>
+    <ClInclude Include="OrbitalMath\OrbitalFuncAnomaly.h">
+      <Filter>OrbitalMath</Filter>
+    </ClInclude>
+    <ClInclude Include="OrbitalMath\OrbitalFuncAux.h">
+      <Filter>OrbitalMath</Filter>
+    </ClInclude>
+    <ClInclude Include="OrbitalMath\OrbitalFuncCore.h">
+      <Filter>OrbitalMath</Filter>
+    </ClInclude>
+    <ClInclude Include="OrbitalMath\OrbitalFuncStates.h">
+      <Filter>OrbitalMath</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

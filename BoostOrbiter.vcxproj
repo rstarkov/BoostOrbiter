@@ -64,6 +64,14 @@
   <ItemGroup>
     <ClInclude Include="borb\boapi.h" />
     <ClInclude Include="borb\GdiHelpers.h" />
+    <ClInclude Include="OrbitalMath\Consts.h" />
+    <ClInclude Include="OrbitalMath\OrbitalMath.h" />
+    <ClInclude Include="OrbitalMath\OrbitalFuncAnomaly.h" />
+    <ClInclude Include="OrbitalMath\OrbitalFuncAux.h" />
+    <ClInclude Include="OrbitalMath\OrbitalFuncCore.h" />
+    <ClInclude Include="OrbitalMath\OrbitalFuncStates.h" />
+    <ClInclude Include="OrbitalMath\Types.h" />
+    <ClInclude Include="OrbitalMath\Util.h" />
     <ClInclude Include="SimpleIni\SimpleIni.h" />
     <ClInclude Include="SimpleIni\SimpleIniCore.h" />
     <ClInclude Include="WTL\atlapp.h" />

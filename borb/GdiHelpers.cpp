@@ -48,7 +48,10 @@ namespace borb
         {
             size_t index = color * 2 + (style - 1);
             if (index >= _mfdPens.size())
+            {
+                _mfdPens.resize(0); // CPen isn't entirely compatible with the resize method, so make sure the old ones are cleared
                 _mfdPens.resize(index + 1);
+            }
 
             if (_mfdPens[index].IsNull())
             {

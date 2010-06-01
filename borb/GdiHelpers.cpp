@@ -62,12 +62,20 @@ namespace borb
             return _mfdPens[index];
         }
 
-        void DrawText(HDC hDC, int x, int y, const std::string &txt)
+        void DrawTextLeft(HDC hDC, int x, int y, const std::string &txt)
         {
             RECT rect;
             rect.left = rect.right = x;
             rect.top = rect.bottom = y;
             DrawText(hDC, txt.c_str(), txt.length(), &rect, DT_NOCLIP);
+        }
+
+        void DrawTextRight(HDC hDC, int x, int y, const std::string &txt)
+        {
+            RECT rect;
+            rect.left = rect.right = x;
+            rect.top = rect.bottom = y;
+            DrawText(hDC, txt.c_str(), txt.length(), &rect, DT_NOCLIP | DT_RIGHT);
         }
 
         static double _vpScrLeft, _vpLogLeft, _vpHorzScale;
@@ -139,14 +147,14 @@ namespace borb
         {
             double xf, yf, xt, yt;
             VpLogToScr(cx-rad, cy-rad, cx+rad, cy+rad, xf, yf, xt, yt);
-            Ellipse(hDC, xf, yf, xt, yt);
+            Ellipse(hDC, (int) xf, (int) yf, (int) xt, (int) yt);
         }
 
         void VpRectDraw(HDC hDC, double x1, double y1, double x2, double y2)
         {
             double xf, yf, xt, yt;
             VpLogToScr(x1, y1, x2, y2, xf, yf, xt, yt);
-            Rectangle(hDC, xf, yf, xt, yt);
+            Rectangle(hDC, (int) xf, (int) yf, (int) xt, (int) yt);
         }
     }
 }

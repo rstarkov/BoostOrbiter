@@ -37,7 +37,8 @@ namespace borb
         // Gets a pen of the specified color and style. Respects the color definitions used by Orbiter.
         HPEN GetDefaultPen(MfdColor color, MfdPenStyle style);
 
-        void DrawText(HDC hDC, int x, int y, const std::string &txt);
+        void DrawTextLeft(HDC hDC, int x, int y, const std::string &txt);
+        void DrawTextRight(HDC hDC, int x, int y, const std::string &txt);
 
         enum VpArrowScaleMode
         {
@@ -46,7 +47,7 @@ namespace borb
             VpArrowScaleLogVert,
         };
 
-        // Stores a mapping between screen coordinates and logical coordinates. This mapping is used by GidHelpers' Vp* functions.
+        // Stores a mapping between screen coordinates and logical coordinates. This mapping is used by GdiHelpers' Vp* functions.
         // The primary difference from GDI's transforms is that only starting positions are affected by the viewport transformation. Things
         // like font sizes, letter shapes and pen widths are intentionally unaffected.
         void SetViewport(double scrLeft, double scrTop, double scrRight, double scrBottom, double logLeft, double logTop, double logRight, double logBottom);

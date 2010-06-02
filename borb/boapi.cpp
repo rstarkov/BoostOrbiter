@@ -31,5 +31,32 @@ namespace borb
         {
             return tmul(matrix_rot_ly(-lon), tmul(matrix_rot_rz(-lat + PI/2), vect));
         }
+
+        void VesselAccelerationTracker::PreStep(VESSEL *vessel, double simdt)
+        {
+            MATRIX3 vesselRotLocal2Global;
+            vessel->GetRotationMatrix(vesselRotLocal2Global);
+
+            // Main acceleration calculation
+            VECTOR3 vel, gravForce;
+            vessel->GetWeightVector(gravForce);
+            GravAccel = mul(vesselRotLocal2Global, gravForce / vessel->GetMass());
+            vessel->GetGlobalVel(vel);
+            TotalAccel = (vel - _lastGlobalVel) / _simdtLast; // true acceleration in the inertial reference frame
+            PerceivedAccel = tmul(vesselRotLocal2Global, TotalAccel - GravAccel); // perceived acceleration onboard the ship
+            _simdtLast = simdt;
+            _lastGlobalVel = vel;
+
+            // Auxillary values
+            LatDeflectionFromVertical = atan2(-PerceivedAccel.x, PerceivedAccel.y);
+
+            if (_first)
+            {
+                _first = false;
+                LatDeflectionFromVertical = 0;
+                TotalAccel = GravAccel = PerceivedAccel = _V(0, 0, 0);
+            }
+        }
+
     }
 }

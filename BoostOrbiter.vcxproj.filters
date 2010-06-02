@@ -33,6 +33,9 @@
       <Filter>borb</Filter>
     </ClCompile>
     <ClCompile Include="PrecompiledBoostOrbiter.cpp" />
+    <ClCompile Include="borb\util.cpp">
+      <Filter>borb</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="borb\boapi.h">
@@ -86,6 +89,9 @@
     </ClInclude>
     <ClInclude Include="OrbitalMath\OrbitalFuncStates.h">
       <Filter>OrbitalMath</Filter>
+    </ClInclude>
+    <ClInclude Include="borb\util.h">
+      <Filter>borb</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

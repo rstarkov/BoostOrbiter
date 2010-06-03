@@ -36,6 +36,9 @@
     <ClCompile Include="borb\util.cpp">
       <Filter>borb</Filter>
     </ClCompile>
+    <ClCompile Include="borb\integration.cpp">
+      <Filter>borb</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="borb\boapi.h">
@@ -91,6 +94,9 @@
       <Filter>OrbitalMath</Filter>
     </ClInclude>
     <ClInclude Include="borb\util.h">
+      <Filter>borb</Filter>
+    </ClInclude>
+    <ClInclude Include="borb\integration.h">
       <Filter>borb</Filter>
     </ClInclude>
   </ItemGroup>

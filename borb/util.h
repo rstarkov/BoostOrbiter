@@ -17,6 +17,14 @@ namespace borb { namespace util {
             return value;
     }
 
+    inline double round(double value, double magnitude)
+    {
+        if (value > 0)
+            return floor(value / magnitude + 0.5) * magnitude;
+        else
+            return -floor(-value / magnitude + 0.5) * magnitude;
+    }
+
     struct AveragePoint
     {
         double MJD;

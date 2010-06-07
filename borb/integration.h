@@ -15,6 +15,11 @@ namespace borb { namespace integration {
         inline iterator begin() { return _map.begin(); }
         inline iterator end() { return _map.end(); }
 
+        inline void Clear()
+        {
+            _map.clear();
+        }
+
         inline std::shared_ptr<T> Get(VESSEL* vessel)
         {
             iterator found = _map.find(vessel);

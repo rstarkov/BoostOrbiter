@@ -1,9 +1,15 @@
-﻿#pragma once
+﻿//----------------------------------------------------------------------------
+// This file is part of the BoostOrbiter project, and is subject to the terms
+// and conditions defined in file 'license.txt'. Full list of contributors is
+// available in file 'contributors.txt'.
+//----------------------------------------------------------------------------
+#pragma once
+
 #include <OrbitalMath/OrbitalMath.h>
 
 namespace OrbitalMath { namespace OrbitalFunc {
 
-    void OrbitalStateConv_Nat2Rect(const OrbitalState_Nat &src, OrbitalState_Rect *dest)
+    void OrbitalStateConv_Nat2Rect(const OrbitalState_Nat& src, OrbitalState_Rect *dest)
     {
         // Sources: demosvoe.pdf (State Vectors and Orbital Elements/Numerit), kep2cart_2002.doc, orbiter pdf and a whole bunch of googling
 
@@ -31,7 +37,7 @@ namespace OrbitalMath { namespace OrbitalFunc {
         dest->Vel.Z = dest->Pos.Z * scale + src.SpecRelAngMomentum / r * (cosWV * sinInclination);
     }
 
-    void OrbitalStateConv_Nat2Compat(const OrbitalState_Nat &src, OrbitalState_Compat *dest)
+    void OrbitalStateConv_Nat2Compat(const OrbitalState_Nat& src, OrbitalState_Compat *dest)
     {
         dest->Eccentricity = src.Eccentricity;
         dest->Inclination = src.Inclination;
@@ -47,7 +53,7 @@ namespace OrbitalMath { namespace OrbitalFunc {
         dest->StdGravParam = StdGravParam2(src.SemiLatusRectum, src.SpecRelAngMomentum);
     }
 
-    void OrbitalStateConv_Compat2Nat(const OrbitalState_Compat &src, OrbitalState_Nat *dest)
+    void OrbitalStateConv_Compat2Nat(const OrbitalState_Compat& src, OrbitalState_Nat *dest)
     {
         dest->Eccentricity = src.Eccentricity;
         dest->Inclination = src.Inclination;
@@ -59,7 +65,7 @@ namespace OrbitalMath { namespace OrbitalFunc {
         dest->SpecRelAngMomentum = SpecRelAngMomentum2(dest->SemiLatusRectum, src.StdGravParam);
     }
 
-    inline void OrbitalStateConv_Compat2Rect(const OrbitalState_Compat &src, OrbitalState_Rect *dest)
+    inline void OrbitalStateConv_Compat2Rect(const OrbitalState_Compat& src, OrbitalState_Rect *dest)
     {
         OrbitalState_Nat nat;
         OrbitalStateConv_Compat2Nat(src, &nat);

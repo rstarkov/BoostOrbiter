@@ -11,7 +11,6 @@ namespace borb { namespace integration {
     class VesselAttached
     {
     public:
-        typedef boost::shared_ptr<ScenarioNode> ScenarioNode_ptr;
         typedef typename std::map<VESSEL*, boost::shared_ptr<T>>::iterator iterator;
 
         inline iterator begin() { return _map.begin(); }

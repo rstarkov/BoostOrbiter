@@ -9,10 +9,12 @@
 
 namespace borb { namespace util {
 
+    using namespace std;
+
     void RecentAverageTracker::Update(double mjd, double value)
     {
         if (_points.size() > 0 && mjd <= _points.back().MJD)
-            throw std::exception("RecentAverageTracker: time must be strictly monotonically increasing.");
+            throw exception("RecentAverageTracker: time must be strictly monotonically increasing.");
         AveragePoint pt;
         pt.MJD = mjd;
         pt.Value = value;
@@ -30,7 +32,7 @@ namespace borb { namespace util {
             }
         }
 
-        for (std::deque<AveragePoint>::iterator i = _points.begin(), end = _points.end(); i < end; ++i)
+        for (deque<AveragePoint>::iterator i = _points.begin(), end = _points.end(); i < end; ++i)
         {
             if (i->MJD > _lastMJD && i->MJD <= to)
             {

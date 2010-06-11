@@ -11,21 +11,19 @@ namespace borb { namespace integration {
     class VesselAttached
     {
     public:
-        typedef typename std::map<VESSEL*, std::shared_ptr<T>>::iterator iterator;
+        typedef boost::shared_ptr<ScenarioNode> ScenarioNode_ptr;
+        typedef typename std::map<VESSEL*, boost::shared_ptr<T>>::iterator iterator;
+
         inline iterator begin() { return _map.begin(); }
         inline iterator end() { return _map.end(); }
+        inline void clear() { _map.clear(); }
 
-        inline void Clear()
-        {
-            _map.clear();
-        }
-
-        inline std::shared_ptr<T> Get(VESSEL* vessel)
+        inline boost::shared_ptr<T> Get(VESSEL* vessel)
         {
             iterator found = _map.find(vessel);
             if (found == _map.end())
             {
-                shared_ptr<T> val(new T(vessel));
+                boost::shared_ptr<T> val = boost::make_shared<T>(vessel);
                 _map[vessel] = val;
                 return val;
             }
@@ -42,7 +40,7 @@ namespace borb { namespace integration {
         }
 
     private:
-        std::map<VESSEL*, std::shared_ptr<T>> _map;
+        std::map<VESSEL*, boost::shared_ptr<T>> _map;
     };
 
 } }

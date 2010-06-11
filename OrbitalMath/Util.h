@@ -1,8 +1,13 @@
-﻿#pragma once
+﻿//----------------------------------------------------------------------------
+// This file is part of the BoostOrbiter project, and is subject to the terms
+// and conditions defined in file 'license.txt'. Full list of contributors is
+// available in file 'contributors.txt'.
+//----------------------------------------------------------------------------
+#pragma once
+
 #include <OrbitalMath/OrbitalMath.h>
 
-namespace OrbitalMath
-{
+namespace OrbitalMath {
 
     // Computes the inverse hyperbolic sine of the specified argument. 
     double asinh(double x)

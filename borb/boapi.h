@@ -5,8 +5,11 @@
 //----------------------------------------------------------------------------
 #pragma once
 
+#include <PrecompiledBoostOrbiter.h>
+
 namespace borb { namespace boapi {
 
+    // Returns a handle to the vessel of the specified name, or NULL if the named vessel could not be found.
     OBJHANDLE GetVesselByName(const std::string& name);
 
     // Rotates the specified vector from planetary local frame to a "horizon" frame at the specified lon/lat.

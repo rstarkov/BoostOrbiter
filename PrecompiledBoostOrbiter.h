@@ -3,9 +3,7 @@
 // and conditions defined in file 'license.txt'. Full list of contributors is
 // available in file 'contributors.txt'.
 //----------------------------------------------------------------------------
-
-#ifndef __BOOSTORBITER_PRECOMPILEDBOOSTORBITER_H__
-#define __BOOSTORBITER_PRECOMPILEDBOOSTORBITER_H__
+#pragma once
 
 #define WIN32_LEAN_AND_MEAN
 #define NOSERVICE
@@ -31,9 +29,13 @@
 #include <vector>
 #include <string>
 #include <deque>
+#include <sstream>
+#include <iomanip>
+
+#include <WTL/atlapp.h>
+
 #include <boost/shared_ptr.hpp>
 #include <boost/weak_ptr.hpp>
 #include <boost/enable_shared_from_this.hpp>
-#include <WTL/atlapp.h>
-
-#endif // __BOOSTORBITER_PRECOMPILEDBOOSTORBITER_H__
+#include <boost/make_shared.hpp>
+#include <boost/ptr_container/ptr_container.hpp>

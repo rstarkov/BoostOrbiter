@@ -5,6 +5,7 @@
 //----------------------------------------------------------------------------
 #pragma once
 
+#include <PrecompiledBoostOrbiter.h>
 #include <OrbitalMath/OrbitalMath.h>
 
 namespace OrbitalMath {

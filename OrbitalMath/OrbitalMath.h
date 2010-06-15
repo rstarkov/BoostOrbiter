@@ -5,8 +5,6 @@
 //----------------------------------------------------------------------------
 #pragma once
 
-#include <math.h>
-
 #include "Consts.h"
 #include "Util.h"
 #include "Types.h"

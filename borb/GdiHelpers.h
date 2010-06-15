@@ -5,6 +5,8 @@
 //----------------------------------------------------------------------------
 #pragma once
 
+#include <PrecompiledBoostOrbiter.h>
+
 namespace borb { namespace GdiHelpers {
 
     enum MfdColor

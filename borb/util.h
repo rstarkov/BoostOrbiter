@@ -5,6 +5,8 @@
 //----------------------------------------------------------------------------
 #pragma once
 
+#include <PrecompiledBoostOrbiter.h>
+
 namespace borb { namespace util {
 
     inline double clamp(double value, double min, double max)

@@ -29,21 +29,21 @@ namespace borb {
 
 
 
-    boost::shared_ptr<oapi::Font> SketchpadHelper::MakeFont(double height, bool proportional, const string& typeface, FontStyle style, int orientation)
+    shared_ptr<oapi::Font> SketchpadHelper::MakeFont(double height, bool proportional, const string& typeface, FontStyle style, int orientation)
     {
-        boost::shared_ptr<oapi::Font> font(oapiCreateFont((int) ceil(height * _unitSize + 0.3 /* fudge factor */), proportional, typeface.c_str(), style, orientation), oapiReleaseFont);
+        shared_ptr<oapi::Font> font(oapiCreateFont((int) ceil(height * _unitSize + 0.3 /* fudge factor */), proportional, typeface.c_str(), style, orientation), oapiReleaseFont);
         return font;
     }
 
-    boost::shared_ptr<oapi::Pen> SketchpadHelper::MakePen(PENSTYLE style, double width, DWORD color)
+    shared_ptr<oapi::Pen> SketchpadHelper::MakePen(PENSTYLE style, double width, DWORD color)
     {
-        boost::shared_ptr<oapi::Pen> pen(oapiCreatePen((int) style, (int) (width * _unitSize), color), oapiReleasePen);
+        shared_ptr<oapi::Pen> pen(oapiCreatePen((int) style, (int) (width * _unitSize), color), oapiReleasePen);
         return pen;
     }
 
-    boost::shared_ptr<oapi::Brush> SketchpadHelper::MakeBrush(DWORD color)
+    shared_ptr<oapi::Brush> SketchpadHelper::MakeBrush(DWORD color)
     {
-        boost::shared_ptr<oapi::Brush> brush(oapiCreateBrush(color), oapiReleaseBrush);
+        shared_ptr<oapi::Brush> brush(oapiCreateBrush(color), oapiReleaseBrush);
         return brush;
     }
 
@@ -76,7 +76,7 @@ namespace borb {
         if (!dashed)
         {
             while (index >= _pensStdSolid.size())
-                _pensStdSolid.push_back(boost::shared_ptr<oapi::Pen>());
+                _pensStdSolid.push_back(shared_ptr<oapi::Pen>());
             if (!_pensStdSolid[index])
                 _pensStdSolid[index] = MakePen(PEN_SOLID, 0, MfdColorValue.FromEnum(color));
             return _pensStdSolid[index].get();
@@ -84,7 +84,7 @@ namespace borb {
         else
         {
             while (index >= _pensStdDashed.size())
-                _pensStdDashed.push_back(boost::shared_ptr<oapi::Pen>());
+                _pensStdDashed.push_back(shared_ptr<oapi::Pen>());
             if (!_pensStdDashed[index])
                 _pensStdDashed[index] = MakePen(PEN_DASHED, 0, MfdColorValue.FromEnum(color));
             return _pensStdDashed[index].get();
@@ -95,7 +95,7 @@ namespace borb {
     {
         unsigned int index = (unsigned int) color;
         while (index >= _brushesStd.size())
-            _brushesStd.push_back(boost::shared_ptr<oapi::Brush>());
+            _brushesStd.push_back(shared_ptr<oapi::Brush>());
         if (!_brushesStd[index])
             _brushesStd[index] = MakeBrush(MfdColorValue.FromEnum(color));
         return _brushesStd[index].get();

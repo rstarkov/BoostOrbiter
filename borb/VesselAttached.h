@@ -13,18 +13,18 @@ namespace borb {
     class VesselAttached : boost::noncopyable
     {
     public:
-        typedef typename std::map<VESSEL*, boost::shared_ptr<T>>::iterator iterator;
+        typedef typename std::map<VESSEL*, std::shared_ptr<T>>::iterator iterator;
 
         inline iterator begin() { return _map.begin(); }
         inline iterator end() { return _map.end(); }
         inline void clear() { _map.clear(); }
 
-        boost::shared_ptr<T> Get(VESSEL* vessel)
+        std::shared_ptr<T> Get(VESSEL* vessel)
         {
             iterator found = _map.find(vessel);
             if (found == _map.end())
             {
-                boost::shared_ptr<T> val(new T(vessel));
+                std::shared_ptr<T> val(new T(vessel));
                 _map[vessel] = val;
                 return val;
             }
@@ -68,7 +68,7 @@ namespace borb {
         }
 
     private:
-        std::map<VESSEL*, boost::shared_ptr<T>> _map;
+        std::map<VESSEL*, std::shared_ptr<T>> _map;
     };
 
 }

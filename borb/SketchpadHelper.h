@@ -24,9 +24,9 @@ namespace borb {
     public:
         SketchpadHelper(oapi::Sketchpad* sketchpad, int width, int height);
 
-        boost::shared_ptr<oapi::Font> MakeFont(double height, bool proportional, const std::string& typeface, FontStyle style = FONT_NORMAL, int orientation = 0);
-        boost::shared_ptr<oapi::Pen> MakePen(PENSTYLE style, double width, DWORD color); // Use width=0 for the thinnest possible. 0.003 is approx the width of a pixel line on an "average size" MFD.
-        boost::shared_ptr<oapi::Brush> MakeBrush(DWORD color);
+        std::shared_ptr<oapi::Font> MakeFont(double height, bool proportional, const std::string& typeface, FontStyle style = FONT_NORMAL, int orientation = 0);
+        std::shared_ptr<oapi::Pen> MakePen(PENSTYLE style, double width, DWORD color); // Use width=0 for the thinnest possible. 0.003 is approx the width of a pixel line on an "average size" MFD.
+        std::shared_ptr<oapi::Brush> MakeBrush(DWORD color);
 
         oapi::Font* GetFontProportional();
         oapi::Font* GetFontMonospace();
@@ -70,10 +70,10 @@ namespace borb {
         double _unitSize; // number of pixels per 1.0 of the logical units used by the helper.
         double _originX, _originY;
 
-        std::vector<boost::shared_ptr<oapi::Pen>> _pensStdSolid, _pensStdDashed;
-        std::vector<boost::shared_ptr<oapi::Brush>> _brushesStd;
-        boost::shared_ptr<oapi::Pen> _penInvisible;
-        boost::shared_ptr<oapi::Font> _fontProportional, _fontMonospace;
+        std::vector<std::shared_ptr<oapi::Pen>> _pensStdSolid, _pensStdDashed;
+        std::vector<std::shared_ptr<oapi::Brush>> _brushesStd;
+        std::shared_ptr<oapi::Pen> _penInvisible;
+        std::shared_ptr<oapi::Font> _fontProportional, _fontMonospace;
 
         inline int calcX(double x) { return (int) ((_originX + x) * _unitSize + 0.5); }
         inline int calcY(double y) { return (int) ((_originY + y) * _unitSize + 0.5); }

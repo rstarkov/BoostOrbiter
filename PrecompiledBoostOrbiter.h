@@ -34,8 +34,4 @@
 
 #include <WTL/atlapp.h>
 
-#include <boost/shared_ptr.hpp>
-#include <boost/weak_ptr.hpp>
-#include <boost/enable_shared_from_this.hpp>
-#include <boost/make_shared.hpp>
 #include <boost/ptr_container/ptr_container.hpp>

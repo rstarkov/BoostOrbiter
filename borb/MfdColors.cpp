@@ -6,12 +6,15 @@
 
 #include <PrecompiledBoostOrbiter.h>
 #include "MfdColors.h"
+
 #include <SimpleIni/SimpleIni.h>
 
 // TODO: allow MFDs to define purpose-based colors, which can be assigned to
 // the "standard" MFD colors or custom RGB values via a per-MFD config file.
 
 namespace borb {
+
+    _mfdColorClass MfdColorValue;
 
     DWORD _mfdColorClass::FromEnum(MfdColor color)
     {
@@ -52,7 +55,5 @@ namespace borb {
         _colors.push_back(ini.GetOrbiterHexValue("", "COL_5_DIM", 0x303030UL));
         return _colors;
     }
-
-    _mfdColorClass MfdColorValue;
 
 }

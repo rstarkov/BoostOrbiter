@@ -7,10 +7,7 @@
 #include <PrecompiledBoostOrbiter.h>
 #include "GdiHelpers.h"
 
-#include <SimpleIni/SimpleIni.h>
-#include "MfdColors.h"
-
-namespace borb { namespace GdiHelpers {
+namespace borb {
 
     using namespace std;
 
@@ -130,4 +127,4 @@ namespace borb { namespace GdiHelpers {
         Rectangle(hDC, (int) xf, (int) yf, (int) xt, (int) yt);
     }
 
-} }
+}

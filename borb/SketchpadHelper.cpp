@@ -7,8 +7,6 @@
 #include <PrecompiledBoostOrbiter.h>
 #include "SketchpadHelper.h"
 
-#include "boapi.h"
-
 namespace borb {
 
     using namespace std;
@@ -23,9 +21,9 @@ namespace borb {
 
         // Configure defaults
         SetFontMonospace();
-        SetTextColor(borb::MfdColorGreen);
+        SetTextColor(MfdColorGreen);
         SetTextBackTransparent();
-        SetPen(borb::MfdColorGreen);
+        SetPen(MfdColorGreen);
         SetBrush(NULL);
     }
 
@@ -72,7 +70,7 @@ namespace borb {
         return _penInvisible.get();
     }
 
-    oapi::Pen* SketchpadHelper::GetPen(borb::MfdColor color, bool dashed)
+    oapi::Pen* SketchpadHelper::GetPen(MfdColor color, bool dashed)
     {
         unsigned int index = (unsigned int) color;
         if (!dashed)
@@ -80,7 +78,7 @@ namespace borb {
             while (index >= _pensStdSolid.size())
                 _pensStdSolid.push_back(boost::shared_ptr<oapi::Pen>());
             if (!_pensStdSolid[index])
-                _pensStdSolid[index] = MakePen(PEN_SOLID, 0, borb::MfdColorValue.FromEnum(color));
+                _pensStdSolid[index] = MakePen(PEN_SOLID, 0, MfdColorValue.FromEnum(color));
             return _pensStdSolid[index].get();
         }
         else
@@ -88,18 +86,18 @@ namespace borb {
             while (index >= _pensStdDashed.size())
                 _pensStdDashed.push_back(boost::shared_ptr<oapi::Pen>());
             if (!_pensStdDashed[index])
-                _pensStdDashed[index] = MakePen(PEN_DASHED, 0, borb::MfdColorValue.FromEnum(color));
+                _pensStdDashed[index] = MakePen(PEN_DASHED, 0, MfdColorValue.FromEnum(color));
             return _pensStdDashed[index].get();
         }
     }
 
-    oapi::Brush* SketchpadHelper::GetBrush(borb::MfdColor color)
+    oapi::Brush* SketchpadHelper::GetBrush(MfdColor color)
     {
         unsigned int index = (unsigned int) color;
         while (index >= _brushesStd.size())
             _brushesStd.push_back(boost::shared_ptr<oapi::Brush>());
         if (!_brushesStd[index])
-            _brushesStd[index] = MakeBrush(borb::MfdColorValue.FromEnum(color));
+            _brushesStd[index] = MakeBrush(MfdColorValue.FromEnum(color));
         return _brushesStd[index].get();
     }
 
@@ -129,7 +127,7 @@ namespace borb {
         return this;
     }
 
-    SketchpadHelper* SketchpadHelper::SetPen(borb::MfdColor color, bool dashed)
+    SketchpadHelper* SketchpadHelper::SetPen(MfdColor color, bool dashed)
     {
         _sketchpad->SetPen(GetPen(color, dashed));
         return this;
@@ -147,7 +145,7 @@ namespace borb {
         return this;
     }
 
-    SketchpadHelper* SketchpadHelper::SetBrush(borb::MfdColor color)
+    SketchpadHelper* SketchpadHelper::SetBrush(MfdColor color)
     {
         _sketchpad->SetBrush(GetBrush(color));
         return this;
@@ -159,9 +157,9 @@ namespace borb {
         return this;
     }
 
-    SketchpadHelper* SketchpadHelper::SetTextColor(borb::MfdColor color)
+    SketchpadHelper* SketchpadHelper::SetTextColor(MfdColor color)
     {
-        _sketchpad->SetTextColor(borb::MfdColorValue.FromEnum(color));
+        _sketchpad->SetTextColor(MfdColorValue.FromEnum(color));
         return this;
     }
 
@@ -172,10 +170,10 @@ namespace borb {
         return this;
     }
 
-    SketchpadHelper* SketchpadHelper::SetTextBackColor(borb::MfdColor color)
+    SketchpadHelper* SketchpadHelper::SetTextBackColor(MfdColor color)
     {
         _sketchpad->SetBackgroundMode(oapi::Sketchpad::BK_OPAQUE);
-        _sketchpad->SetBackgroundColor(borb::MfdColorValue.FromEnum(color));
+        _sketchpad->SetBackgroundColor(MfdColorValue.FromEnum(color));
         return this;
     }
 

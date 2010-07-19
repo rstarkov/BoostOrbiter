@@ -9,7 +9,7 @@
 
 #include "MfdColors.h"
 
-namespace borb { namespace GdiHelpers {
+namespace borb {
 
     enum MfdPenStyle
     {
@@ -44,4 +44,4 @@ namespace borb { namespace GdiHelpers {
     void VpCircleDraw(HDC hDC, double cx, double cy, double rad);
     void VpRectDraw(HDC hDC, double x1, double y1, double x2, double y2);
 
-} }
+}

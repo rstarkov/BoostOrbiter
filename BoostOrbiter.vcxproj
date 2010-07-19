@@ -54,24 +54,26 @@
     <None Include="boost\readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="borb\boapi.cpp" />
     <ClCompile Include="borb\GdiHelpers.cpp" />
-    <ClCompile Include="borb\integration.cpp" />
     <ClCompile Include="borb\MfdColors.cpp" />
+    <ClCompile Include="borb\Misc.cpp" />
+    <ClCompile Include="borb\ScenarioTree.cpp" />
     <ClCompile Include="borb\SketchpadHelper.cpp" />
-    <ClCompile Include="borb\util.cpp" />
+    <ClCompile Include="borb\VesselAccelerationTracker.cpp" />
     <ClCompile Include="PrecompiledBoostOrbiter.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="borb\boapi.h" />
+    <ClInclude Include="borb\borb.h" />
     <ClInclude Include="borb\GdiHelpers.h" />
-    <ClInclude Include="borb\integration.h" />
     <ClInclude Include="borb\MfdColors.h" />
+    <ClInclude Include="borb\Misc.h" />
+    <ClInclude Include="borb\ScenarioTree.h" />
     <ClInclude Include="borb\SketchpadHelper.h" />
-    <ClInclude Include="borb\util.h" />
+    <ClInclude Include="borb\VesselAccelerationTracker.h" />
+    <ClInclude Include="borb\VesselAttached.h" />
     <ClInclude Include="OrbitalMath\Consts.h" />
     <ClInclude Include="OrbitalMath\OrbitalMath.h" />
     <ClInclude Include="OrbitalMath\OrbitalFuncAnomaly.h" />

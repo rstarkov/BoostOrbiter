@@ -26,28 +26,28 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="borb\boapi.cpp">
-      <Filter>borb</Filter>
-    </ClCompile>
     <ClCompile Include="borb\GdiHelpers.cpp">
       <Filter>borb</Filter>
     </ClCompile>
     <ClCompile Include="PrecompiledBoostOrbiter.cpp" />
-    <ClCompile Include="borb\util.cpp">
-      <Filter>borb</Filter>
-    </ClCompile>
-    <ClCompile Include="borb\integration.cpp">
-      <Filter>borb</Filter>
-    </ClCompile>
     <ClCompile Include="borb\MfdColors.cpp">
       <Filter>borb</Filter>
     </ClCompile>
     <ClCompile Include="borb\SketchpadHelper.cpp">
       <Filter>borb</Filter>
     </ClCompile>
+    <ClCompile Include="borb\Misc.cpp">
+      <Filter>borb</Filter>
+    </ClCompile>
+    <ClCompile Include="borb\ScenarioTree.cpp">
+      <Filter>borb</Filter>
+    </ClCompile>
+    <ClCompile Include="borb\VesselAccelerationTracker.cpp">
+      <Filter>borb</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="borb\boapi.h">
+    <ClInclude Include="borb\borb.h">
       <Filter>borb</Filter>
     </ClInclude>
     <ClInclude Include="borb\GdiHelpers.h">
@@ -99,16 +99,22 @@
     <ClInclude Include="OrbitalMath\OrbitalFuncStates.h">
       <Filter>OrbitalMath</Filter>
     </ClInclude>
-    <ClInclude Include="borb\util.h">
-      <Filter>borb</Filter>
-    </ClInclude>
-    <ClInclude Include="borb\integration.h">
-      <Filter>borb</Filter>
-    </ClInclude>
     <ClInclude Include="borb\MfdColors.h">
       <Filter>borb</Filter>
     </ClInclude>
     <ClInclude Include="borb\SketchpadHelper.h">
+      <Filter>borb</Filter>
+    </ClInclude>
+    <ClInclude Include="borb\Misc.h">
+      <Filter>borb</Filter>
+    </ClInclude>
+    <ClInclude Include="borb\ScenarioTree.h">
+      <Filter>borb</Filter>
+    </ClInclude>
+    <ClInclude Include="borb\VesselAccelerationTracker.h">
+      <Filter>borb</Filter>
+    </ClInclude>
+    <ClInclude Include="borb\VesselAttached.h">
       <Filter>borb</Filter>
     </ClInclude>
   </ItemGroup>

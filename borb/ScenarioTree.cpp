@@ -5,13 +5,11 @@
 //----------------------------------------------------------------------------
 
 #include <PrecompiledBoostOrbiter.h>
-#include "integration.h"
+#include "ScenarioTree.h"
 
-namespace borb { namespace integration {
+namespace borb {
 
     using namespace std;
-    using boost::ptr_vector;
-    using boost::ptr_map;
 
     void ScenarioNode::SaveTo(FILEHANDLE scn)
     {
@@ -33,6 +31,9 @@ namespace borb { namespace integration {
 
     void ScenarioNode::save(FILEHANDLE scn, int depth)
     {
+        using boost::ptr_map;
+        using boost::ptr_vector;
+
         string indent = string(depth * 2, ' ');
 
         for (ptr_map<string, ScenarioValue>::iterator it = Values.begin(); it != Values.end(); it++)
@@ -103,4 +104,4 @@ namespace borb { namespace integration {
         throw exception("ScenarioNode::LoadFrom: unexpected end of input (2)");
     }
 
-} }
+}

@@ -7,8 +7,8 @@
 
 #include <PrecompiledBoostOrbiter.h>
 
+#include "Misc.h"
 #include "MfdColors.h"
-#include "boapi.h"
 
 namespace borb {
 
@@ -31,21 +31,21 @@ namespace borb {
         oapi::Font* GetFontProportional();
         oapi::Font* GetFontMonospace();
         oapi::Pen* GetPenInvisible();
-        oapi::Pen* GetPen(borb::MfdColor color, bool dashed = false);
-        oapi::Brush* GetBrush(borb::MfdColor color);
+        oapi::Pen* GetPen(MfdColor color, bool dashed = false);
+        oapi::Brush* GetBrush(MfdColor color);
 
         SketchpadHelper* SetFont(oapi::Font* font);
         SketchpadHelper* SetFontProportional();
         SketchpadHelper* SetFontMonospace();
         SketchpadHelper* SetPen(oapi::Pen* pen);
-        SketchpadHelper* SetPen(borb::MfdColor color, bool dashed = false);
+        SketchpadHelper* SetPen(MfdColor color, bool dashed = false);
         SketchpadHelper* SetPenInvisible();
         SketchpadHelper* SetBrush(oapi::Brush* brush);
-        SketchpadHelper* SetBrush(borb::MfdColor color);
+        SketchpadHelper* SetBrush(MfdColor color);
         SketchpadHelper* SetTextColor(DWORD color);
-        SketchpadHelper* SetTextColor(borb::MfdColor color);
+        SketchpadHelper* SetTextColor(MfdColor color);
         SketchpadHelper* SetTextBackColor(DWORD color);
-        SketchpadHelper* SetTextBackColor(borb::MfdColor color);
+        SketchpadHelper* SetTextBackColor(MfdColor color);
         SketchpadHelper* SetTextBackTransparent();
 
         SketchpadHelper* OriginSet(double x, double y);

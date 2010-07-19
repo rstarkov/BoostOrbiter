@@ -7,6 +7,18 @@
 
 #include <PrecompiledBoostOrbiter.h>
 
+namespace borb {
+
+    union VECTOR2
+    {
+	    double data[3];
+	    struct { double x, y; };
+        VECTOR2() { x = 0; y = 0; }
+        VECTOR2(double x_, double y_) { x = x_; y = y_; }
+    };
+
+}
+
 namespace borb { namespace boapi {
 
     // Returns a handle to the vessel of the specified name, or NULL if the named vessel could not be found.

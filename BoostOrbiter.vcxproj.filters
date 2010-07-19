@@ -39,6 +39,12 @@
     <ClCompile Include="borb\integration.cpp">
       <Filter>borb</Filter>
     </ClCompile>
+    <ClCompile Include="borb\MfdColors.cpp">
+      <Filter>borb</Filter>
+    </ClCompile>
+    <ClCompile Include="borb\SketchpadHelper.cpp">
+      <Filter>borb</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="borb\boapi.h">
@@ -97,6 +103,12 @@
       <Filter>borb</Filter>
     </ClInclude>
     <ClInclude Include="borb\integration.h">
+      <Filter>borb</Filter>
+    </ClInclude>
+    <ClInclude Include="borb\MfdColors.h">
+      <Filter>borb</Filter>
+    </ClInclude>
+    <ClInclude Include="borb\SketchpadHelper.h">
       <Filter>borb</Filter>
     </ClInclude>
   </ItemGroup>

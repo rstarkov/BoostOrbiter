@@ -57,6 +57,8 @@
     <ClCompile Include="borb\boapi.cpp" />
     <ClCompile Include="borb\GdiHelpers.cpp" />
     <ClCompile Include="borb\integration.cpp" />
+    <ClCompile Include="borb\MfdColors.cpp" />
+    <ClCompile Include="borb\SketchpadHelper.cpp" />
     <ClCompile Include="borb\util.cpp" />
     <ClCompile Include="PrecompiledBoostOrbiter.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -67,6 +69,8 @@
     <ClInclude Include="borb\boapi.h" />
     <ClInclude Include="borb\GdiHelpers.h" />
     <ClInclude Include="borb\integration.h" />
+    <ClInclude Include="borb\MfdColors.h" />
+    <ClInclude Include="borb\SketchpadHelper.h" />
     <ClInclude Include="borb\util.h" />
     <ClInclude Include="OrbitalMath\Consts.h" />
     <ClInclude Include="OrbitalMath\OrbitalMath.h" />

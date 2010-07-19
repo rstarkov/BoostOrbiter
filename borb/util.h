@@ -19,6 +19,16 @@ namespace borb { namespace util {
             return value;
     }
 
+    inline int clamp(int value, int min, int max)
+    {
+        if (value < min)
+            return min;
+        else if (value > max)
+            return max;
+        else
+            return value;
+    }
+
     inline double round(double value, double magnitude)
     {
         if (value > 0)

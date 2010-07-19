@@ -7,32 +7,15 @@
 
 #include <PrecompiledBoostOrbiter.h>
 
-namespace borb { namespace GdiHelpers {
+#include "MfdColors.h"
 
-    enum MfdColor
-    {
-        MfdColorGreen,
-        MfdColorGreenDark,
-        MfdColorYellow,
-        MfdColorYellowDark,
-        MfdColorWhite,
-        MfdColorGrey,
-        MfdColorRed,
-        MfdColorRedDark,
-        MfdColorBlue,
-        MfdColorBlueDark,
-        MfdColorGreyDark,
-        MfdColorGreyDarkDark,
-    };
+namespace borb { namespace GdiHelpers {
 
     enum MfdPenStyle
     {
         MfdPenSolid = 1,
         MfdPenDashed = 2,
-    };
-
-    // Gets the actual 32-bit color value for the specified "standard" color. Respects the color definitions used by Orbiter through "Config/MFD/Default.cfg".
-    DWORD GetDefaultColor(MfdColor color);
+    }; // TODO: integrate with SketchpadHelper
 
     // Gets a pen of the specified color and style. Respects the color definitions used by Orbiter.
     HPEN GetDefaultPen(MfdColor color, MfdPenStyle style);

@@ -16,6 +16,7 @@ namespace borb {
     {
         shared_ptr<borb::SketchpadHelper> skh = make_shared<borb::SketchpadHelper>(skp, GetWidth(), GetHeight());
         Update(skh.get());
+        return true;
     }
 #else
     void MfdBase::Update(HDC hDC)

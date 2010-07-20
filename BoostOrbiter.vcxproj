@@ -91,7 +91,6 @@
     <None Include="boost\readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="borb\GdiHelpers.cpp" />
     <ClCompile Include="borb\MfdBase.cpp" />
     <ClCompile Include="borb\MfdColors.cpp" />
     <ClCompile Include="borb\Misc.cpp" />
@@ -107,7 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="borb\borb.h" />
-    <ClInclude Include="borb\GdiHelpers.h" />
     <ClInclude Include="borb\MfdBase.h" />
     <ClInclude Include="borb\MfdColors.h" />
     <ClInclude Include="borb\Misc.h" />
@@ -125,11 +123,6 @@
     <ClInclude Include="OrbitalMath\Util.h" />
     <ClInclude Include="SimpleIni\SimpleIni.h" />
     <ClInclude Include="SimpleIni\SimpleIniCore.h" />
-    <ClInclude Include="WTL\atlapp.h" />
-    <ClInclude Include="WTL\atlgdi.h" />
-    <ClInclude Include="WTL\atlres.h" />
-    <ClInclude Include="WTL\atluser.h" />
-    <ClInclude Include="WTL\atlwinx.h" />
     <ClInclude Include="PrecompiledBoostOrbiter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

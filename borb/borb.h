@@ -7,7 +7,6 @@
 
 #include <PrecompiledBoostOrbiter.h>
 
-#include "GdiHelpers.h"
 #include "MfdColors.h"
 #include "MfdBase.h"
 #include "Misc.h"

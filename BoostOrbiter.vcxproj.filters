@@ -10,9 +10,6 @@
     <Filter Include="SimpleIni">
       <UniqueIdentifier>{e631f965-d057-4d46-af16-45d079ffb724}</UniqueIdentifier>
     </Filter>
-    <Filter Include="WTL">
-      <UniqueIdentifier>{3d0b3753-bd3f-4cc9-bda4-792640c7f628}</UniqueIdentifier>
-    </Filter>
     <Filter Include="OrbitalMath">
       <UniqueIdentifier>{8bf76010-4be3-4e70-82d2-9409bdabe105}</UniqueIdentifier>
     </Filter>
@@ -26,9 +23,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="borb\GdiHelpers.cpp">
-      <Filter>borb</Filter>
-    </ClCompile>
     <ClCompile Include="PrecompiledBoostOrbiter.cpp" />
     <ClCompile Include="borb\MfdColors.cpp">
       <Filter>borb</Filter>
@@ -53,29 +47,11 @@
     <ClInclude Include="borb\borb.h">
       <Filter>borb</Filter>
     </ClInclude>
-    <ClInclude Include="borb\GdiHelpers.h">
-      <Filter>borb</Filter>
-    </ClInclude>
     <ClInclude Include="SimpleIni\SimpleIni.h">
       <Filter>SimpleIni</Filter>
     </ClInclude>
     <ClInclude Include="SimpleIni\SimpleIniCore.h">
       <Filter>SimpleIni</Filter>
-    </ClInclude>
-    <ClInclude Include="WTL\atlapp.h">
-      <Filter>WTL</Filter>
-    </ClInclude>
-    <ClInclude Include="WTL\atlgdi.h">
-      <Filter>WTL</Filter>
-    </ClInclude>
-    <ClInclude Include="WTL\atlres.h">
-      <Filter>WTL</Filter>
-    </ClInclude>
-    <ClInclude Include="WTL\atluser.h">
-      <Filter>WTL</Filter>
-    </ClInclude>
-    <ClInclude Include="WTL\atlwinx.h">
-      <Filter>WTL</Filter>
     </ClInclude>
     <ClInclude Include="PrecompiledBoostOrbiter.h" />
     <ClInclude Include="OrbitalMath\OrbitalMath.h">

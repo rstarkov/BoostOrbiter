@@ -7,7 +7,6 @@ instead.
 
 * boost (various, Boost Software License)
 * SimpleIni (Brodie Thiesfield, MIT License)
-* WTL (Nenad Stefanovic, Common Public License)
 
 CONTRIBUTORS
 ============

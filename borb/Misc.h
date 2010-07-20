@@ -17,6 +17,9 @@ namespace borb {
         VECTOR2(double x_, double y_) { x = x_; y = y_; }
     };
 
+    bool HadUnhandledException();
+    void UnhandledException(const std::exception& ex, const std::string& moduleName);
+
     // Returns a handle to the vessel of the specified name, or NULL if the named vessel could not be found.
     OBJHANDLE GetVesselByName(const std::string& name);
 

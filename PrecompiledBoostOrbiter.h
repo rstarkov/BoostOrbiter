@@ -31,6 +31,4 @@
 #include <sstream>
 #include <iomanip>
 
-#include <WTL/atlapp.h>
-
 #include <boost/ptr_container/ptr_container.hpp>

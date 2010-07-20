@@ -22,7 +22,6 @@
 #include <malloc.h>
 #include <atlbase.h>
 
-#include <Orbiterapi.h>
 #include <Orbitersdk.h>
 
 #include <map>

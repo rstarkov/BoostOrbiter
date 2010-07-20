@@ -45,6 +45,9 @@
     <ClCompile Include="borb\VesselAccelerationTracker.cpp">
       <Filter>borb</Filter>
     </ClCompile>
+    <ClCompile Include="borb\MfdBase.cpp">
+      <Filter>borb</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="borb\borb.h">
@@ -115,6 +118,9 @@
       <Filter>borb</Filter>
     </ClInclude>
     <ClInclude Include="borb\VesselAttached.h">
+      <Filter>borb</Filter>
+    </ClInclude>
+    <ClInclude Include="borb\MfdBase.h">
       <Filter>borb</Filter>
     </ClInclude>
   </ItemGroup>

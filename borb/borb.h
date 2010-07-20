@@ -9,6 +9,7 @@
 
 #include "GdiHelpers.h"
 #include "MfdColors.h"
+#include "MfdBase.h"
 #include "Misc.h"
 #include "ScenarioTree.h"
 #include "SketchpadHelper.h"

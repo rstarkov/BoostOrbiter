@@ -11,7 +11,7 @@ namespace borb {
 
     union VECTOR2
     {
-	    double data[3];
+	    double data[2];
 	    struct { double x, y; };
         VECTOR2() { x = 0; y = 0; }
         VECTOR2(double x_, double y_) { x = x_; y = y_; }

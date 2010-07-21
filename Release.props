@@ -10,7 +10,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <IgnoreSpecificDefaultLibraries>msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>

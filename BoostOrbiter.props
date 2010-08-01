@@ -3,7 +3,7 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir>.\.bin\$(Configuration)\</OutDir>
-    <IntDir>.\.temp\$(Configuration)\</IntDir>
+    <IntDir>.\.bin\temp\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <Bscmake>

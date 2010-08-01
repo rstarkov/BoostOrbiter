@@ -2,7 +2,6 @@ syntax: glob
 
 __*
 .bin
-.temp
 *.ncb
 *.suo
 *.vcxproj.user

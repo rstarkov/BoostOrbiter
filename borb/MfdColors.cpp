@@ -14,6 +14,8 @@
 
 namespace borb {
 
+    using namespace std;
+
     _mfdColorClass MfdColorValue;
 
     DWORD _mfdColorClass::FromEnum(MfdColor color)
@@ -36,11 +38,11 @@ namespace borb {
         return 0;
     }
 
-    std::vector<DWORD> _mfdColorClass::loadColorValues()
+    vector<DWORD> _mfdColorClass::loadColorValues()
     {
         CSimpleIni ini;
         ini.LoadFile("Config/MFD/Default.cfg"); // unfortunately this has comments to the right of values which SimpleIni doesn't understand...
-        std::vector<DWORD> _colors;
+        vector<DWORD> _colors;
         _colors.push_back(ini.GetOrbiterHexValue("", "COL_0_BRT", 0x00FF00UL));
         _colors.push_back(ini.GetOrbiterHexValue("", "COL_0_DIM", 0x40A040UL));
         _colors.push_back(ini.GetOrbiterHexValue("", "COL_1_BRT", 0x00FFFFUL));

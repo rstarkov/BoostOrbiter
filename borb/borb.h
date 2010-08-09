@@ -10,6 +10,7 @@
 #include "MfdColors.h"
 #include "MfdBase.h"
 #include "Misc.h"
+#include "Module.h"
 #include "ScenarioTree.h"
 #include "SketchpadHelper.h"
 #include "VesselAccelerationTracker.h"

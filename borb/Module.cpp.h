@@ -4,6 +4,8 @@
 // available in file 'contributors.txt'.
 //----------------------------------------------------------------------------
 
+#include "borb.h"
+
 #if !defined(BORB_MODULE_VARIABLE)
 # error Module variable (BORB_MODULE_VARIABLE) is undefined. Define it before including this file, and ensure it's of type "std::shared_ptr<BORB_MODULE_CLASS>".
 #endif
@@ -26,9 +28,6 @@
 #  define BORB_MODULE_NAME "dummy"
 #endif
 
-
-#include "Module.h"
-#include "borb.h"
 
 using namespace std;
 
@@ -93,6 +92,39 @@ DLLCLBK void opcCloseRenderViewport()
 }
 
 
+DLLCLBK void opcLoadState(FILEHANDLE scn)
+{
+    if (borb::HadUnhandledException())
+        return;
+    try
+    {
+        borb::ScenarioNode root;
+        root.LoadFrom(scn);
+        BORB_MODULE_VARIABLE->LoadFrom(&root);
+    }
+    catch (exception& ex)
+    {
+        borb::UnhandledException(ex, BORB_MODULE_NAME);
+    }
+}
+
+DLLCLBK void opcSaveState(FILEHANDLE scn)
+{
+    if (borb::HadUnhandledException())
+        return;
+    try
+    {
+        borb::ScenarioNode root;
+        BORB_MODULE_VARIABLE->SaveTo(&root);
+        root.SaveTo(scn);
+    }
+    catch (exception& ex)
+    {
+        borb::UnhandledException(ex, BORB_MODULE_NAME);
+    }
+}
+
+
 DLLCLBK void opcPreStep(double simt, double simdt, double mjd)
 {
     if (borb::HadUnhandledException())
@@ -114,39 +146,6 @@ DLLCLBK void opcPostStep(double simt, double simdt, double mjd)
     try
     {
         BORB_MODULE_VARIABLE->PostStep(simt, simdt, mjd);
-    }
-    catch (exception& ex)
-    {
-        borb::UnhandledException(ex, BORB_MODULE_NAME);
-    }
-}
-
-
-DLLCLBK void opcSaveState(FILEHANDLE scn)
-{
-    if (borb::HadUnhandledException())
-        return;
-    try
-    {
-        borb::ScenarioNode root;
-        BORB_MODULE_VARIABLE->SaveTo(&root);
-        root.SaveTo(scn);
-    }
-    catch (exception& ex)
-    {
-        borb::UnhandledException(ex, BORB_MODULE_NAME);
-    }
-}
-
-DLLCLBK void opcLoadState(FILEHANDLE scn)
-{
-    if (borb::HadUnhandledException())
-        return;
-    try
-    {
-        borb::ScenarioNode root;
-        root.LoadFrom(scn);
-        BORB_MODULE_VARIABLE->LoadFrom(&root);
     }
     catch (exception& ex)
     {

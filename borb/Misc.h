@@ -156,4 +156,40 @@ namespace borb {
         int _count;
     };
 
+    template<typename TMfdClass>
+    class MfdMode
+    {
+    public:
+        MfdMode(int modeActivateOapiKey, const std::string& modeLabel)
+        {
+            _label = vector<char>(modeLabel.begin(), modeLabel.end());
+            _label.push_back(0);
+
+            MFDMODESPEC spec;
+            spec.name = &_label[0];
+            spec.key = modeActivateOapiKey;
+            spec.msgproc = mfdMsgProc;
+
+            _mfdModeId = oapiRegisterMFDMode(spec);
+        }
+
+        ~MfdMode()
+        {
+            oapiUnregisterMFDMode(_mfdModeId);
+        }
+
+    private:
+        int _mfdModeId;
+        std::vector<char> _label; // the API documentation doesn't mention whether the non-const char* is an error or not, so better safe...
+
+        static int mfdMsgProc(UINT msg, UINT mfd, WPARAM wparam, LPARAM lparam)
+        {
+            if (msg == OAPI_MSG_MFD_OPENED)
+            {
+                return (int) new TMfdClass(LOWORD(wparam), HIWORD(wparam), (VESSEL*)lparam);
+            }
+            return 0;
+        }
+    };
+
 }

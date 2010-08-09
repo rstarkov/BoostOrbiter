@@ -109,6 +109,8 @@
     <ClInclude Include="borb\MfdBase.h" />
     <ClInclude Include="borb\MfdColors.h" />
     <ClInclude Include="borb\Misc.h" />
+    <ClInclude Include="borb\Module.cpp.h" />
+    <ClInclude Include="borb\Module.h" />
     <ClInclude Include="borb\ScenarioTree.h" />
     <ClInclude Include="borb\SketchpadHelper.h" />
     <ClInclude Include="borb\VesselAccelerationTracker.h" />

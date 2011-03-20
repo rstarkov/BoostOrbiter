@@ -67,6 +67,13 @@ namespace borb {
             }
         }
 
+        // This method must be called in the module's DeleteVessel callback, to inform this collection that the
+        // specified vessel no longer exists.
+        void DeleteVessel(VESSEL* vessel)
+        {
+            _map.erase(vessel);
+        }
+
     private:
         std::map<VESSEL*, std::shared_ptr<T>> _map;
     };

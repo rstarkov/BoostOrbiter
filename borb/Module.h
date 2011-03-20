@@ -20,6 +20,8 @@ namespace borb {
 
         virtual void PreStep(double simt, double simdt, double mjd) { }
         virtual void PostStep(double simt, double simdt, double mjd) { }
+
+        virtual void DeleteVessel(VESSEL* vessel) { }
     };
 
 }

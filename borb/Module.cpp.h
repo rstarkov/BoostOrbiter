@@ -153,6 +153,20 @@ DLLCLBK void opcPostStep(double simt, double simdt, double mjd)
     }
 }
 
+DLLCLBK void opcDeleteVessel(OBJHANDLE hVessel)
+{
+    if (borb::HadUnhandledException())
+        return;
+    try
+    {
+        BORB_MODULE_VARIABLE->DeleteVessel(oapiGetVesselInterface(hVessel));
+    }
+    catch (exception& ex)
+    {
+        borb::UnhandledException(ex, BORB_MODULE_NAME);
+    }
+}
+
 
 
 #ifdef _DEBUG

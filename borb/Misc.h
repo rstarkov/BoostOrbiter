@@ -20,6 +20,14 @@ namespace borb {
     bool HadUnhandledException();
     void UnhandledException(const std::exception& ex, const std::string& moduleName);
 
+    // A wrapper around oapiWriteLog that fixes the const annoyance.
+    inline void WriteLog(const std::string& message)
+    {
+        std::vector<char> copyMsg(message.begin(), message.end());
+        copyMsg.push_back(0);
+        oapiWriteLog(&copyMsg[0]); // could just const_cast, but who knows...
+    }
+
     // Returns a handle to the vessel of the specified name, or NULL if the named vessel could not be found.
     OBJHANDLE GetVesselByName(const std::string& name);
 

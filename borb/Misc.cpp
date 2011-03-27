@@ -25,12 +25,13 @@ namespace borb {
         if (had_unhandled_exception)
             return TRUE;
         had_unhandled_exception = true;
-        MessageBox(hwnd, (string("Module ") + unhandled_exception_modulename + " has thrown an exception.\n\nMessage:\n" + unhandled_exception_message + "\n\nNo further messages will be shown about exceptions in ReFuelMFD.").c_str(), "ReFuelMFD", MB_ICONERROR | MB_TOPMOST);
+        MessageBox(hwnd, (string("Module ") + unhandled_exception_modulename + " has thrown an exception.\n\nMessage:\n" + unhandled_exception_message + "\n\nNo further messages will be shown about exceptions in this module.").c_str(), "ReFuelMFD", MB_ICONERROR | MB_TOPMOST);
         return TRUE;
     }
 
     void UnhandledException(const exception& ex, const string& moduleName)
     {
+        borb::WriteLog("Module " + moduleName + " has thrown an exception. No further exceptions will be logged. Message: " + ex.what());
         unhandled_exception_modulename = moduleName;
         unhandled_exception_message = ex.what();
         EnumThreadWindows(GetCurrentThreadId(), UnhandledException_EnumThreadWndProc, 0);

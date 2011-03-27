@@ -18,14 +18,15 @@ namespace borb {
         write(scn, "END_NODE", "");
     }
 
-    void ScenarioNode::LoadFrom(FILEHANDLE scn)
+    bool ScenarioNode::LoadFrom(FILEHANDLE scn)
     {
         char* line;
         if (!oapiReadScenario_nextline(scn, line))
-            return;
+            return false;
         if (string(line) != "SCENARIO_TREE")
-            return;
+            return false;
         load(scn);
+        return true;
     }
 
 

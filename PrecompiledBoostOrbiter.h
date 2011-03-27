@@ -32,3 +32,4 @@
 #include <iomanip>
 
 #include <boost/ptr_container/ptr_container.hpp>
+#include <boost/filesystem.hpp>

@@ -13,6 +13,18 @@
     <Filter Include="OrbitalMath">
       <UniqueIdentifier>{8bf76010-4be3-4e70-82d2-9409bdabe105}</UniqueIdentifier>
     </Filter>
+    <Filter Include="boost-libs">
+      <UniqueIdentifier>{55c07380-bc73-4f3d-b293-4512dcee585f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost-libs\filesystem">
+      <UniqueIdentifier>{0907b3e2-d627-4915-a75d-765b8d375166}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost-libs\smart_ptr">
+      <UniqueIdentifier>{70c11e66-1952-4dcf-be90-affc84d6fc1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="boost-libs\system">
+      <UniqueIdentifier>{f72a11fe-8e66-41c9-a835-066ade7636ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="boost\license.txt">
@@ -41,6 +53,27 @@
     </ClCompile>
     <ClCompile Include="borb\MfdBase.cpp">
       <Filter>borb</Filter>
+    </ClCompile>
+    <ClCompile Include="boost-libs\libs\filesystem\src\operations.cpp">
+      <Filter>boost-libs\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="boost-libs\libs\filesystem\src\path.cpp">
+      <Filter>boost-libs\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="boost-libs\libs\filesystem\src\portability.cpp">
+      <Filter>boost-libs\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="boost-libs\libs\filesystem\src\utf8_codecvt_facet.cpp">
+      <Filter>boost-libs\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="boost-libs\libs\smart_ptr\src\sp_collector.cpp">
+      <Filter>boost-libs\smart_ptr</Filter>
+    </ClCompile>
+    <ClCompile Include="boost-libs\libs\smart_ptr\src\sp_debug_hooks.cpp">
+      <Filter>boost-libs\smart_ptr</Filter>
+    </ClCompile>
+    <ClCompile Include="boost-libs\libs\system\src\error_code.cpp">
+      <Filter>boost-libs\system</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

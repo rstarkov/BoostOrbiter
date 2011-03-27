@@ -91,12 +91,49 @@
     <None Include="boost\readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="borb\MfdBase.cpp" />
-    <ClCompile Include="borb\MfdColors.cpp" />
-    <ClCompile Include="borb\Misc.cpp" />
-    <ClCompile Include="borb\ScenarioTree.cpp" />
-    <ClCompile Include="borb\SketchpadHelper.cpp" />
-    <ClCompile Include="borb\VesselAccelerationTracker.cpp" />
+    <ClCompile Include="boost-libs\libs\filesystem\src\operations.cpp" />
+    <ClCompile Include="boost-libs\libs\filesystem\src\path.cpp" />
+    <ClCompile Include="boost-libs\libs\filesystem\src\portability.cpp" />
+    <ClCompile Include="boost-libs\libs\filesystem\src\utf8_codecvt_facet.cpp" />
+    <ClCompile Include="boost-libs\libs\smart_ptr\src\sp_collector.cpp" />
+    <ClCompile Include="boost-libs\libs\smart_ptr\src\sp_debug_hooks.cpp" />
+    <ClCompile Include="boost-libs\libs\system\src\error_code.cpp" />
+    <ClCompile Include="borb\MfdBase.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2006P1-Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2010P1-Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2006P1-Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2010P1-Release|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="borb\MfdColors.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2006P1-Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2010P1-Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2006P1-Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2010P1-Release|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="borb\Misc.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2006P1-Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2010P1-Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2006P1-Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2010P1-Release|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="borb\ScenarioTree.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2006P1-Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2010P1-Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2006P1-Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2010P1-Release|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="borb\SketchpadHelper.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2006P1-Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2010P1-Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2006P1-Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2010P1-Release|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="borb\VesselAccelerationTracker.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2006P1-Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2010P1-Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2006P1-Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2010P1-Release|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="PrecompiledBoostOrbiter.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2006P1-Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='2010P1-Debug|Win32'">Create</PrecompiledHeader>

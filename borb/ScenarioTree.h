@@ -143,8 +143,15 @@ namespace borb {
         boost::ptr_map<std::string, ScenarioNode> NamedChildren;
         boost::ptr_vector<ScenarioNode> NumberedChildren;
 
+        // Saves this scenario tree to the specified open Orbiter file.
         void SaveTo(FILEHANDLE scn);
-        void LoadFrom(FILEHANDLE scn);
+        // Loads this scenario tree from the specified open Orbiter file. Returns false if the file was empty or not a scenario tree.
+        bool LoadFrom(FILEHANDLE scn);
+
+        // Determines whether this node is completely empty, i.e. has no children of any kind.
+        bool IsEmpty() { return Values.empty() && NamedChildren.empty() && NumberedChildren.empty(); }
+        // Deletes all values from this node, making it completely empty.
+        void Clear() { Values.clear(); NamedChildren.clear(); NumberedChildren.clear(); }
 
     private:
         void save(FILEHANDLE scn, int depth);
